@@ -20,8 +20,8 @@ const ENV_VARS = [
   "PAGE_ACCESS_TOKEN",
   "APP_SECRET",
   "VERIFY_TOKEN",
-  "APP_URL",
-  "SHOP_URL"
+  //"SHOP_URL",
+  "APP_URL"
 ];
 
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
   appUrl: process.env.APP_URL,
 
   // URL of your website
-  shopUrl: process.env.SHOP_URL,
+  //shopUrl: process.env.SHOP_URL,
 
   // Persona IDs
   personas: {},

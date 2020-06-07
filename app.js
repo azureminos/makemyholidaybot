@@ -80,6 +80,7 @@ app.post("/webhook", (req, res) => {
       if ("changes" in entry) {
         // Handle Page Changes event
         let receiveMessage = new Receive();
+        console.log(">>>>Webhook Event", entry.changes[0]);
         if (entry.changes[0].field === "feed") {
           let change = entry.changes[0].value;
           switch (change.item) {
@@ -96,7 +97,7 @@ app.post("/webhook", (req, res) => {
               );
               break;
             default:
-              console.log('Unsupported feed change type.');
+              console.log("Unsupported feed change type.");
               return;
           }
         }
